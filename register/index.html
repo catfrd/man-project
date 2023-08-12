@@ -91,7 +91,7 @@
       <!-- //.row -->
       
 
-      <form action="register.php" method="POST" onsubmit="return ">
+      <form action="register.php" method="POST" onsubmit="">
         <label for="name">Name</label>
         <input type="text" id="name" name="name"> <br>
         
@@ -124,11 +124,11 @@
         <input type="email" id="email" name="email">
         
 
-        <label for="mobile_number">Mobile Number</label>
+        <label for="mobile_number">Contact Number</label>
         <input type="tel" id="mobile_number" name="mobile_number">
         
 
-        <input type="submit" value="Register" class="btn btn-base-color sm-btn-medium btn-large">
+        <input type="submit" value="Register" class="btn btn-base-color sm-btn-medium btn-large" onclick="success.html">
 
       </form>
         
@@ -237,10 +237,7 @@
   <script src="../res/js/jquery.magnific-popup.min.js"></script>
   <script src="../res/js/jquery.validate.min.js"></script>
 
-  <!-- BG Parallax JS -->
-  <script src="../res/js/TweenMax.min.js"></script>
-  <script src="../res/js/ScrollMagic.min.js"></script>
-  <script src="../res/js/animation.gsap.min.js"></script>
+  
 
   <!-- Theme -->
   <script src="../res/js/main.js"></script>

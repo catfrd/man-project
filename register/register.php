@@ -1,6 +1,10 @@
 <?php
 $errors = array();
+// database connection code
+// $con = mysqli_connect('localhost', 'database_user', 'database_password','database');
 
+$con = mysqli_connect('localhost', 'root', '','regdb');
+// get the post records
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = test_input($_POST["name"]);
     $institution = test_input($_POST["institution"]);
@@ -38,9 +42,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // If there are no errors, you can proceed to save the data or perform other actions
     if (empty($errors)) {
+        // database insert SQL code
+        $sql = "INSERT INTO `registration_details` ( `Name`, `Institution`, `Department`,`event`,`Email`,) VALUES ( '$Name', '$Email', '$pass')";
+        // insert in database 
+        $rs = mysqli_query($con, $sql);
+        if($rs)
+            {
+                include('success.html');
+            }
+
         // Perform registration process here (e.g., save to database)
         // Redirect to a success page or perform other actions
-        $success_message = "Successfully registered!";
+       
         // header("Location: success.php");
         exit();
     }
@@ -52,6 +65,7 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -104,6 +118,10 @@ function test_input($data) {
     </form>
 </body>
 </html>
+
+
+
+
 
 
 
