@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <!-- Title, icon, description and keywords -->
-  <title>Contact Us | Bon Secours</title>
+  <title>Contact Us | Biz Sparks 2k23</title>
   <link rel="shortcut icon" href="../res/images/bon_secors.png">
   <meta name="description" content="Contact us at TEDxJMI, x = independently organised TED event. Igniting Minds. This October, at Jamia Millia Islamia.">
   <meta name="keywords" content="TEDx, JMI, Jamia Millia Islamia, New Delhi, event, talks">
@@ -52,8 +52,8 @@
           </button>
 
           <a class="navbar-brand font-family-alt letter-spacing-1 text-extra-large text-uppercase" href="/">
-            <img class="logo-navbar-dark" src="https://www.bonsecourscollege.edu.in/images/logo-red.png" alt=""/>
-            <img class="logo-navbar-white" src="https://www.bonsecourscollege.edu.in/images/logo-red.png" alt=""/>
+            <img class="logo-navbar-dark" src="../res/images/logo-pur.png" alt=""/>
+            <img class="logo-navbar-white" src="../res/images/logo-pur.png" alt=""/>
           </a>
         </div>
         <!-- //.navbar-header -->
@@ -253,7 +253,25 @@
 
   <!-- Scroll to top -->
   <a href="#page-top" class="page-scroll scroll-to-top"><i class="fa fa-angle-up"></i></a>
+   
+  <script>
+    document.getElementById("form-contact").addEventListener("submit", function (event) {
+        event.preventDefault();
 
+        var formData = new FormData(this);
+
+        fetch("process_contact.php", {
+            method: "POST",
+            body: formData
+        }).then(function (response) {
+            return response.text();
+        }).then(function (responseText) {
+            alert(responseText);
+            window.location.href = "thank_you.html"; // Redirect to thank you page
+        });
+    });
+
+  </script>
 
   <!-- jQuery -->
   <script src="../res/js/jquery.min.js"></script>

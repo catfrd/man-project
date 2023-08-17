@@ -34,6 +34,29 @@
   <!-- Color skin -->
   <link rel="stylesheet" href="../res/css/color_red.css">
 
+
+
+  <style>
+    .checkbox-container label{
+      text-indent: 30px; 
+      font-weight: lighter;
+
+    }
+    input[type="checkbox"]{
+      position:absolute;
+      margin-left:-450px;
+      margin-top:10px \9
+
+    }
+
+    .form-container{
+      /* display: none; */
+    }
+
+    
+    
+  </style>
+  
   
 </head>
 
@@ -51,8 +74,8 @@
           </button>
 
           <a class="navbar-brand font-family-alt letter-spacing-1 text-extra-large text-uppercase" href="/">
-            <img class="logo-navbar-dark" src="https://www.bonsecourscollege.edu.in/images/logo-red.png" alt="bon_secours"/>
-            <img class="logo-navbar-white" src="https://www.bonsecourscollege.edu.in/images/logo-red.png" alt="bon_secours"/>
+            <img class="logo-navbar-dark" src="../res/images/logo-pur.png" alt="bon_secours"/>
+            <img class="logo-navbar-white" src="../res/images/logo-pur.png" alt="bon_secours"/>
           </a>
         </div>
         <!-- //.navbar-header -->
@@ -91,24 +114,26 @@
       <!-- //.row -->
       
 
-      <form action="register.php" method="POST" onsubmit="">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name"> <br>
-        
+      <form  action="/register" method="POST" >
         
         <label for="institution">Name of the institution </label>
-        <input type="text" id="institution" name="institution">
-        
+        <input type="text" id="institution" name="institution" required>
 
         <label for="Department">Department</label>
-        <input type="text" id="Department" name="Department">
-        
+        <input type="text" id="Department" name="Department" required>
 
-        <label for="event">Choose an Event</label>
-        <select name="event" id="event">
+        <label for="pg/ug">PG/UG</label>
+        <input type="text" id="pg/ug" name="pg/ug" required>
+
+        <label for="year">Year</label>
+        <input type="text" id="year" name="year" required>
+
+        <label for="event">Choose the events</label><br><br>
+
+        <!-- <select name="event" id="event" required>
           <option value="select">Select </option>
           <option value="master_of_masters">Master of Masters</option>
-          <option value="auction play">Auction Play</option>
+          <option value="auction_play">Auction Play</option>
           <option value="haccer_mimica">Haccer Mimica</option>
           <option value="Guessing_guns">Guessing Guns</option>
           <option value="the_alpinist">The Alpinsit</option>
@@ -117,22 +142,72 @@
           <option value="extremepore">Extremepore</option>
           <option value="tuzel_strut">Tuzel Strut</option>
           <option value="hr_mind_maze">HR Mind Maze</option>
-        </select>
-        
+        </select> -->
+       <div class="checkbox-container"> 
+        <input type="checkbox" id="master_of_masters" value="master_of_masters" name="event1" data-target="form1">
+        <label for="master_of_masters">Master of Masters</label><br>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email">
-        
+        <input type="checkbox" id="the_alpinist" value="the_alpinist" name="event2" data-target="form2">
+        <label for="the_alpinist">The Alpinist</label><br>
+     
+        <input type="checkbox" id="auction_play" value="auction_play" name="event3" data-target="form3">
+        <label for="auction_play">Auction Play</label><br>
 
-        <label for="mobile_number">Contact Number</label>
-        <input type="tel" id="mobile_number" name="mobile_number">
+        <input type="checkbox" id="haccer_mimica" value="haccer_mimica" name="event4" data-target="form4">
+        <label for="haccer_mimica">Haccer Mimica</label><br>
         
+        <input type="checkbox" id="guessing_games" value="guessing_games" name="event5" data-target="form5">
+        <label for="guessing_games">Guessing Games</label><br>
 
-        <input type="submit" value="Register" class="btn btn-base-color sm-btn-medium btn-large" onclick="success.html">
+        <input type="checkbox" id="ted_talk" value="ted_talk" name="event6" data-target="form6">
+        <label for="ted_talk">Ted Talk</label><br>
+        
+        <input type="checkbox" id="tuzel_strut" value="tuzel_strut" name="event7" data-target="form7">
+        <label for="tuzel_strut">Tuzel Strut</label><br>
+
+        <input type="checkbox" id="Sorting_the_choas" value="Sorting_the_choas" name="event8" data-target="form8">
+        <label for="Sorting_the_choas">Sorting the Chaos</label><br>
+
+        <input type="checkbox" id="extrempore" value="extrempore" name="event9" data-target="form9">
+        <label for="extrempore">Extrempore</label><br>
+
+        <input type="checkbox" id="hr_mind_maze" value="hr_mind_maze" name="event10" data-target="form10">
+        <label for="hr_mind_maze">Hr Mind Maze</label><br>
+
+       </div>
+       <br>
+
+          <form class="form-container" id="form1" >
+            <label for="tm1">Team member 1</label>
+            <input type="text" id="tm1" name="tm1" required>
+            <label for="event1">Team member 2</label>
+            <input type="text" id="tm2" name="tm2" required>
+            <label for="event1">Team member 3</label>
+            <input type="text" id="tm3" name="tm3" required>
+            <label for="event1">Team member 4</label>
+            <input type="text" id="tm4" name="tm4" required>
+            <label for="event1">Team member 5</label>
+            <input type="text" id="tm5" name="tm5" required>
+            <label for="event1">Team member 6</label>
+            <input type="text" id="tm6" name="tm6" required>
+          
+          </form>
+
+      
+          <form class="form-container" id="form2" >
+            <label for="tm1">Team member 1</label>
+            <input type="text" id="tm1" name="tm1" required>
+          </form>
+
+        <input type="submit" value="Next >" class="btn btn-base-color sm-btn-medium btn-large" >
 
       </form>
-        
 
+      <div class="">
+        <!-- master of masters -->
+        
+      </div>
+        
       
     </div>
     <!-- //.container -->
@@ -217,6 +292,24 @@
 
   <!-- Scroll to top -->
   <a href="#page-top" class="page-scroll scroll-to-top"><i class="fa fa-angle-up"></i></a>
+   
+  <script>
+    var checkboxes = document.querySelectorAll("[data-target]");
+
+    checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener("change", function () {
+            var targetId = this.getAttribute("data-target");
+            var targetForm = document.getElementById(targetId);
+
+            if (this.checked) {
+                targetForm.style.display = "block";
+            } else {
+                targetForm.style.display = "none";
+            }
+        });
+    });
+  </script>
+  
 
 
   <!-- jQuery -->
@@ -236,6 +329,9 @@
   <script src="../res/js/flickity.pkgd.min.js"></script>
   <script src="../res/js/jquery.magnific-popup.min.js"></script>
   <script src="../res/js/jquery.validate.min.js"></script>
+  
+  <!-- Redirect Events  -->
+  <script src="../res/js/redirect.js"></script>
 
   
 
