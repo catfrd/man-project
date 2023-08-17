@@ -50,7 +50,7 @@
     }
 
     .form-container{
-      display: none;
+      
     }
 
     
@@ -144,40 +144,75 @@
           <option value="hr_mind_maze">HR Mind Maze</option>
         </select> -->
        <div class="checkbox-container"> 
-        <input type="checkbox" id="master_of_masters" value="master_of_masters" name="event1" data-target="form1">
+        <input type="checkbox" id="master_of_masters" value="master_of_masters" name="event1" data-target="form1" onclick="checkboxclicked()">
         <label for="master_of_masters">Master of Masters</label><br>
 
-        <input type="checkbox" id="the_alpinist" value="the_alpinist" name="event2" data-target="form2">
+        <input type="checkbox" id="the_alpinist" value="the_alpinist" name="event2" data-target="form2" onclick="checkboxclicked()" >
         <label for="the_alpinist">The Alpinist</label><br>
      
-        <input type="checkbox" id="auction_play" value="auction_play" name="event3" data-target="form3">
+        <input type="checkbox" id="auction_play" value="auction_play" name="event3" data-target="form3" onclick="checkboxclicked()" >
         <label for="auction_play">Auction Play</label><br>
 
-        <input type="checkbox" id="haccer_mimica" value="haccer_mimica" name="event4" data-target="form4">
+        <input type="checkbox" id="haccer_mimica" value="haccer_mimica" name="event4" data-target="form4" onclick="checkboxclicked()">
         <label for="haccer_mimica">Haccer Mimica</label><br>
         
-        <input type="checkbox" id="guessing_games" value="guessing_games" name="event5" data-target="form5">
+        <input type="checkbox" id="guessing_games" value="guessing_games" name="event5" data-target="form5" onclick="checkboxclicked()">
         <label for="guessing_games">Guessing Games</label><br>
 
-        <input type="checkbox" id="ted_talk" value="ted_talk" name="event6" data-target="form6">
+        <input type="checkbox" id="ted_talk" value="ted_talk" name="event6" data-target="form6" onclick="checkboxclicked()">
         <label for="ted_talk">Ted Talk</label><br>
         
-        <input type="checkbox" id="tuzel_strut" value="tuzel_strut" name="event7" data-target="form7">
+        <input type="checkbox" id="tuzel_strut" value="tuzel_strut" name="event7" data-target="form7" onclick="checkboxclicked()" >
         <label for="tuzel_strut">Tuzel Strut</label><br>
 
-        <input type="checkbox" id="Sorting_the_choas" value="Sorting_the_choas" name="event8" data-target="form8">
+        <input type="checkbox" id="Sorting_the_choas" value="Sorting_the_choas" name="event8" data-target="form8" onclick="checkboxclicked()">
         <label for="Sorting_the_choas">Sorting the Chaos</label><br>
 
-        <input type="checkbox" id="extrempore" value="extrempore" name="event9" data-target="form9">
+        <input type="checkbox" id="extrempore" value="extrempore" name="event9" data-target="form9" onclick="checkboxclicked()" >
         <label for="extrempore">Extrempore</label><br>
 
-        <input type="checkbox" id="hr_mind_maze" value="hr_mind_maze" name="event10" data-target="form10">
+        <input type="checkbox" id="hr_mind_maze" value="hr_mind_maze" name="event10" data-target="form10" onclick="checkboxclicked()" >
         <label for="hr_mind_maze">Hr Mind Maze</label><br>
 
        </div>
+       <script>
+        function checkboxclicked(){
+          var master_of_masters = document.getElementById("master_of_masters");
+          var the_alpinist = document.getElementById("the_alpinist");
+          
+
+
+
+          var form1 = document.getElementById("form1");
+          var form2 = document.getElementById("form2");
+          if(master_of_masters.checked==true){
+            form1.style.display="block";
+            
+          }
+          else{
+            form1.style.display="none";
+          }
+         if(the_alpinist.checked == true){
+            form2.style.display="block";
+         }
+         else{
+          form2.style.display="none" ;
+         }
+          
+          
+
+        }
+
+
+       </script>
+
+       
        <br>
 
-          <form class="form-container" id="form1" >
+        <div style="display: none;" id="form1">
+          <h4>Master of Masters</h4>
+          <br>
+          <form class="form-container"  >
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" required>
             <label for="event1">Team member 2</label>
@@ -192,21 +227,23 @@
             <input type="text" id="tm6" name="tm6" required>
           
           </form>
-
-      
-          <form class="form-container" id="form2" >
+        </div>
+        <div style="display: none;" id="form2">
+          <form class="form-container"  >
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" required>
           </form>
-
-          <form class="form-container" id="form3" >
+        </div>
+        <div style="display: none;" id="form3">
+          <form class="form-container"  >
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" required>
             <label for="tm2">Team member 2</label>
             <input type="text" id="tm2" name="tm2" required>
           </form>
-
-          <form class="form-container" id="form4" >
+        </div>
+        <div style="display: none;" id="form4">
+          <form class="form-container"  >
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" required>
             <label for="tm2">Team member 2</label>
@@ -221,15 +258,18 @@
             <input type="text" id="tm6" name="tm6" required>
           
           </form>
-
-          <form class="form-container" id="form5" >
+        </div>
+        <div style="display: none;" id="form5">  
+          <form class="form-container"  >
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" required>
             <label for="tm2">Team member 2</label>
             <input type="text" id="tm2" name="tm2" required>
           </form>
-
-          <form class="form-container" id="form6" >
+        </div>  
+          
+        <div style="display: none; " id="form6">  
+          <form class="form-container"  >
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" required>
             <label for="tm2">Team member 2</label>
@@ -241,8 +281,9 @@
             <label for="tm5">Team member 5</label>
             <input type="text" id="tm5" name="tm5" required>
           </form>
-          
-          <form class="form-container" id="form7" >
+        </div>
+        <div style="display: none;" id="form7">  
+          <form class="form-container"  >
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" required>
             <label for="tm2">Team member 2</label>
@@ -259,15 +300,17 @@
             <input type="text" id="tm7" name="tm7" required>
           
           </form>
-
-          <form class="form-container" id="form8" >
+        </div>
+        <div style="display: none;" id="form8">
+          <form class="form-container"  >
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" required>
             <label for="tm2">Team member 2</label>
             <input type="text" id="tm2" name="tm2" required>
           </form>
-
-          <form class="form-container" id="form9" >
+        </div>
+        <div style="display: none;" id="form9">
+          <form class="form-container"  >
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" required>
             <label for="tm2">Team member 2</label>
@@ -275,8 +318,9 @@
             <label for="tm3">Team member 3</label>
             <input type="text" id="tm3" name="tm3" required>
           </form>
-
-          <form class="form-container" id="form10" >
+        </div>
+        <div style="display: none;" id="form10" >
+          <form class="form-container"  >
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" required>
             <label for="tm2">Team member 2</label>
@@ -291,7 +335,7 @@
             <input type="text" id="tm6" name="tm6" required>
           
           </form>
-
+        </div>
 
         <input type="submit" value="Next >" class="btn btn-base-color sm-btn-medium btn-large" >
 
