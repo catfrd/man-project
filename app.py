@@ -20,6 +20,8 @@ load_dotenv()
 
 PORT            = os.environ.get('PORT')
 MONGO_URI       = os.environ.get('MONGO_URI')
+
+
 client = MongoClient(MONGO_URI)
 
 DB_NAME = 'man-project'
@@ -153,14 +155,6 @@ def registered():
 
 
 
-
-
-
-
-if __name__ == '__main__':
-
-    app.run(debug=True, host='0.0.0.0', port=PORT)
-
 @app.route("/registration-success", methods=['GET','POST'])
 def registration_success():
     if (request.method == "POST"):
@@ -171,10 +165,15 @@ def registration_success():
         collection_name='staff-details'
         collection=database[collection_name]
 
-
-
-
-
-
-
     return render_template('index.html')
+
+
+@app.route("/", methods=['GET','POST'])
+def home():
+
+    return "Hello World"
+
+
+if __name__ == '__main__':
+
+    app.run(debug=True, host='0.0.0.0', port=PORT)
