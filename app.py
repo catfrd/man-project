@@ -29,8 +29,7 @@ database = client[DB_NAME]
 @app.route("/", methods=['GET','POST'])
 def home():
 
-    return "Hello World"
-
+    return render_template('index.html')
 
 @app.route('/register',methods=["GET","POST"])
 def register():
