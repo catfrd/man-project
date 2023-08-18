@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, session, url_for
+from flask import Flask, g,render_template, request, redirect, session, url_for
 from pymongo import MongoClient
 from dotenv import load_dotenv
 import os
@@ -44,6 +44,8 @@ def registered():
     if(request.method == "POST"):
         collection_name='registration'
         collection=database[collection_name]
+        # if 'result_dict' not in g:
+        #     result = {}
 
         institutionName=request.values.get("institution")
         department=request.values.get("Department")
@@ -57,8 +59,8 @@ def registered():
             "year": year,
             "events": events
         }
-        x= collection.insert_one(result).inserted_id
-        document_id = ObjectId(x)
+        # x= collection.insert_one(g.result).inserted_id
+        # document_id = ObjectId("")
 
 
 # Update the document with the specified _id
@@ -76,47 +78,59 @@ def registered():
                 team_member4=request.form.get("tm4")
                 team_member5=request.form.get("tm5")
                 team_member6=request.form.get("tm6")
-                update_operation = {"$set": {"eventName": eventName,"team_members":[team_member1,team_member2,team_member3,team_member4,team_member5,team_member6]}}
-                collection.update_one({"_id": document_id}, update_operation)
-            elif(events[i]=="The Alpinist"):
-                eventName="The Alpinist"
+                result["en1"]=eventName
+                result["tm1"]=[team_member1,team_member2,team_member3,team_member4,team_member5,team_member6]
+            #     update_operation = {"$set": {"eventName": eventName,"team_members":[team_member1,team_member2,team_member3,team_member4,team_member5,team_member6]}}
+            #     collection.update_one({"_id": document_id}, update_operation)
+            elif(events[i]=="the_alpinist"):
+                eventName="the_alpinist"
                 team_member1=request.form.get("tm1")
-                update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1}}
-                collection.update_one({"_id": document_id}, update_operation)
-            elif(events[i]=="Auction Play"):
-                eventName="Auction Play"
+                result["en2"]=eventName
+                result["tm2"]=[team_member1]
+                # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1}}
+                # collection.update_one({"_id": document_id}, update_operation)
+            elif(events[i]=="auction_play"):
+                eventName="auction_play"
                 team_member1=request.form.get("tm1")
                 team_member2=request.form.get("tm2")
-                update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2}}
-                collection.update_one({"_id": document_id}, update_operation)
+                result["en3"]=eventName
+                result["tm3"]=[team_member1,team_member2]
+                # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2}}
+                # collection.update_one({"_id": document_id}, update_operation)
 
-            elif(events[i]=="Haccer Mimica"):
-                eventName="Haccer Mimica"
+            elif(events[i]=="haccer_mimica"):
+                eventName="haccer_mimica"
                 team_member1=request.form.get("tm1")
                 team_member2=request.form.get("tm2")
                 team_member3=request.form.get("tm3")
                 team_member4=request.form.get("tm4")
                 team_member5=request.form.get("tm5")
                 team_member6=request.form.get("tm6")
-                update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2,"team_member3":team_member3,"team_member4":team_member4,"team_member5":team_member5,"team_member6":team_member6}}
-                collection.update_one({"_id": document_id}, update_operation)
-            elif(events[i]=="Guessing Games"):
-                eventName="Guessing Games"
+                # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2,"team_member3":team_member3,"team_member4":team_member4,"team_member5":team_member5,"team_member6":team_member6}}
+                # collection.update_one({"_id": document_id}, update_operation)
+                result["en4"]=eventName
+                result["tm4"]=[team_member1,team_member2,team_member3,team_member4,team_member5,team_member6]
+            elif(events[i]=="guessing_games"):
+                eventName="guessing_games"
                 team_member1=request.form.get("tm1")
                 team_member2=request.form.get("tm2")
-                update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2}}
-                collection.update_one({"_id": document_id}, update_operation)
-            elif(events[i]=="Ted Talk"):
-                eventName="Ted Talk"
+                result["en4"]=eventName
+                result["tm4"]=[team_member1,team_member2]
+                # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2}}
+                # collection.update_one({"_id": document_id}, update_operation)
+            elif(events[i]=="ted_talk"):
+                eventName="ted_talk"
                 team_member1=request.form.get("tm1")
                 team_member2=request.form.get("tm2")
                 team_member3=request.form.get("tm3")
                 team_member4=request.form.get("tm4")
                 team_member5=request.form.get("tm5")
-                update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2,"team_member3":team_member3,"team_member4":team_member4,"team_member5":team_member5}}
-                collection.update_one({"_id": document_id}, update_operation)
-            elif(events[i]=="Tuzel Strut"):
-                eventName="Tuzel Strut"
+                result["en5"]=eventName
+                result["tm5"]=[team_member1,team_member2,team_member3,team_member4,team_member5]
+                # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2,"team_member3":team_member3,"team_member4":team_member4,"team_member5":team_member5}}
+                # collection.update_one({"_id": document_id}, update_operation)
+            elif(events[i]=="tuzel_strut"):
+                eventName="tuzel_strut"
                 team_member1=request.form.get("tm1")
                 team_member2=request.form.get("tm2")
                 team_member3=request.form.get("tm3")
@@ -124,54 +138,71 @@ def registered():
                 team_member5=request.form.get("tm5")
                 team_member6=request.form.get("tm6")
                 team_member7=request.form.get("tm7")
-                update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2,"team_member3":team_member3,"team_member4":team_member4,"team_member5":team_member5,"team_member6":team_member6,"team_member7":team_member7}}
-                collection.update_one({"_id": document_id}, update_operation)
-            elif(events[i]=="Sorting the chaos"):
-                eventName="Sorting the chaos"
+                result["en6"]=eventName
+                result["tm6"]=[team_member1,team_member2,team_member3,team_member4,team_member5,team_member6,team_member7]
+                # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2,"team_member3":team_member3,"team_member4":team_member4,"team_member5":team_member5,"team_member6":team_member6,"team_member7":team_member7}}
+                # collection.update_one({"_id": document_id}, update_operation)
+            elif(events[i]=="sorting_the_chaos"):
+                eventName="sorting_the_chaos"
                 team_member1=request.form.get("tm1")
                 team_member2=request.form.get("tm2")
-                update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2}}
-                collection.update_one({"_id": document_id}, update_operation)
+                result["en7"]=eventName
+                result["tm7"]=[team_member1,team_member2]
+                # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2}}
+                # collection.update_one({"_id": document_id}, update_operation)
 
-            elif(events[i]=="Extrempore"):
-                eventName="Extrempore"
-                team_member1=request.form.get("tm1")
-                team_member2=request.form.get("tm2")
-                team_member3=request.form.get("tm3")
-                update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2,"team_member3":team_member3}}
-                collection.update_one({"_id": document_id}, update_operation)
-
-            elif(events[i]=="The Alpinist"):
-                eventName="The Alpinist"
+            elif(events[i]=="extrempore"):
+                eventName="extrempore"
+                team_member11=request.form.get("tm1")
+                team_member21=request.form.get("tm2")
+                team_member31=request.form.get("tm3")
+                # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2,"team_member3":team_member3}}
+                # collection.update_one({"_id": document_id}, update_operation)
+                result["en8"]=eventName
+                result["tm8"]=[team_member11,team_member21,team_member31]
+            elif(events[i]=="hr_mind_maze"):
+                eventName="hr_mind_maze"
                 team_member1=request.form.get("tm1")
                 team_member2=request.form.get("tm2")
                 team_member3=request.form.get("tm3")
                 team_member4=request.form.get("tm4")
                 team_member5=request.form.get("tm5")
                 team_member6=request.form.get("tm6")
+                result["en9"]=eventName
+                result["tm9"]=[team_member1,team_member2,team_member3,team_member4,team_member5,team_member6]
 
-                update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2,"team_member3":team_member3,"team_member4":team_member4,"team_member5":team_member5,"team_member6":team_member6}}
-                collection.update_one({"_id": document_id}, update_operation)
 
-        return render_template('final_registration.html')
+                # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2,"team_member3":team_member3,"team_member4":team_member4,"team_member5":team_member5,"team_member6":team_member6}}
+                # collection.update_one({"_id": document_id}, update_operation)
+
+        return redirect(url_for('registration_success',**result))
     return render_template('index.html')
-
-
-
 
 @app.route("/registration-success", methods=['GET','POST'])
 def registration_success():
     if (request.method == "POST"):
+        res=dict(request.args)
         staffincharge=request.form.get("institution")
         staffemail=request.form.get("email")
         mobile=request.form.get("mobile_number")
 
-        collection_name='staff-details'
+        collection_name='registration'
         collection=database[collection_name]
+        res['staffincharge']=staffincharge
+        res['staffemail']=staffemail
+        res['mobile']=mobile
+        collection.insert_one(res)
+        return render_template('final_registration.html')
+    return render_template('final_registration.html')
 
-    return render_template('index.html')
+
+
+
+
 
 
 if __name__ == '__main__':
 
     app.run(debug=True, host='0.0.0.0', port=PORT)
+
+
