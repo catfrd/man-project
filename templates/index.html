@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Title, icon, description and keywords -->
+  <title>Register | Biz Sparks 2k23</title>
+  <link rel="shortcut icon" href="../static/images/bon_secors.png">
+  <meta name="description" content="Register for TEDxJMI, x = independently organised TED event. Igniting Minds. This October, at Jamia Millia Islamia.">
+  <meta name="keywords" content="TEDx, JMI, Jamia Millia Islamia, New Delhi, event, talks">
+
+
+  <!-- Browser themes -->
+  <meta name="theme-color" content="#000">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+
+  <!-- Font Icons -->
+  <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+
+  <!-- Plugins -->
+  <link rel="stylesheet" href="../static/css/flickity.min.css">
+  <link rel="stylesheet" href="../static/css/magnific-popup.css">
+
+  <!-- Main styles -->
+  <link rel="stylesheet" href="../static/css/main.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+
+  <!-- Color skin -->
+  <link rel="stylesheet" href="../static/css/color_red.css">
+
+
+
+  <style>
+    .checkbox-container label{
+      text-indent: 30px;
+      font-weight: lighter;
+
+    }
+    input[type="checkbox"]{
+      position:absolute;
+      margin-left:-450px;
+      margin-top:10px \9
+
+    }
+
+    .event-box {
+      border:2px lightgray solid;
+      padding: 5px 5px 5px 5px;
+
+    }
+
+
+
+  </style>
+
+
+</head>
+
+<body id="page-top">
+  <!-- Navigation Start -->
+  <nav id="navigation" class="navbar navbar-fixed-top navbar-dark">
+    <div class="container">
+      <div class="row">
+        <div class="navbar-header col-lg-3">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand font-family-alt letter-spacing-1 text-extra-large text-uppercase" href="/">
+            <img class="logo-navbar-dark" src="../static/images/logo-pur.png" alt="bon_secours"/>
+            <img class="logo-navbar-white" src="../static/images/logo-pur.png" alt="bon_secours"/>
+          </a>
+        </div>
+        <!-- //.navbar-header -->
+
+        <div id="navbar" class="navbar-collapse collapse col-lg-9 pull-right">
+          <ul class="nav navbar-nav font-family-alt letter-spacing-1 text-uppercase font-weight-700">
+            <li><a href="/" class="line-height-unset">About</a></li>
+            <li><a href="/events/" class="line-height-unset">Events</a></li>
+            <li><a href="/sponsors/" class="line-height-unset">Rules</a></li>
+            <li><a href="/contact/" class="line-height-unset">Contact Us</a></li>
+            <li><a href="#page-top" class="page-scroll">Register</a></li>
+          </ul>
+        </div>
+        <!-- //.navbar-collapse -->
+      </div>
+      <!-- //.row -->
+    </div>
+    <!-- //.container -->
+  </nav>
+  <!-- //Navigation End -->
+
+
+
+  <!-- Section - Registration start -->
+  <section id="registration" class="bg-white-2">
+    <div class="container">
+      <div class="row no-padding-rl">
+        <div class="col-md-12">
+          <h2 class="font-family-alt font-weight-700 sm-title-large title-extra-large-2 text-gray-dark-2">
+            Register for Biz spark 2k23
+          </h2>
+          <span class="bg-base-color xs-margin-6 xs-no-margin-rl margin-3 no-margin-rl separator-line-extra-thick-long"></span>
+        </div>
+        <!-- //.col-md-12 -->
+      </div>
+      <!-- //.row -->
+
+
+      <form  method="POST" action="/final-registration"> >
+
+        <label for="institution">Name of the institution </label>
+        <input type="text" id="institution" name="institution" required>
+
+        <label for="Department">Department</label>
+        <input type="text" id="Department" name="Department" required>
+
+        <label for="pg/ug">PG/UG</label>
+        <input type="text" id="pg/ug" name="pg/ug" required>
+
+        <label for="year">Year</label>
+        <input type="text" id="year" name="year" required>
+
+        <label for="event">Choose the events</label><br><br>
+
+        <!-- <select name="event" id="event" required>
+          <option value="select">Select </option>
+          <option value="master_of_masters">Master of Masters</option>
+          <option value="auction_play">Auction Play</option>
+          <option value="haccer_mimica">Haccer Mimica</option>
+          <option value="Guessing_guns">Guessing Guns</option>
+          <option value="the_alpinist">The Alpinsit</option>
+          <option value="Sorting_the_choas">Sorting the Choas</option>
+          <option value="ted_talks">Ted Talks</option>
+          <option value="extremepore">Extremepore</option>
+          <option value="tuzel_strut">Tuzel Strut</option>
+          <option value="hr_mind_maze">HR Mind Maze</option>
+        </select> -->
+       <div class="checkbox-container">
+        <input type="checkbox" id="master_of_masters" value="master_of_masters" name="event" data-target="form1" onclick="checkboxclicked()">
+        <label for="master_of_masters">Master of Masters</label><br>
+
+        <input type="checkbox" id="the_alpinist" value="the_alpinist" name="event" data-target="form2" onclick="checkboxclicked()" >
+        <label for="the_alpinist">The Alpinist</label><br>
+
+        <input type="checkbox" id="auction_play" value="auction_play" name="event" data-target="form3" onclick="checkboxclicked()" >
+        <label for="auction_play">Auction Play</label><br>
+
+        <input type="checkbox" id="haccer_mimica" value="haccer_mimica" name="event" data-target="form4" onclick="checkboxclicked()">
+        <label for="haccer_mimica">Haccer Mimica</label><br>
+
+        <input type="checkbox" id="guessing_games" value="guessing_games" name="event" data-target="form5" onclick="checkboxclicked()">
+        <label for="guessing_games">Guessing Games</label><br>
+
+        <input type="checkbox" id="ted_talk" value="ted_talk" name="event" data-target="form6" onclick="checkboxclicked()">
+        <label for="ted_talk">Ted Talk</label><br>
+
+        <input type="checkbox" id="tuzel_strut" value="tuzel_strut" name="event" data-target="form7" onclick="checkboxclicked()" >
+        <label for="tuzel_strut">Tuzel Strut</label><br>
+
+        <input type="checkbox" id="Sorting_the_choas" value="Sorting_the_choas" name="event" data-target="form8" onclick="checkboxclicked()">
+        <label for="Sorting_the_choas">Sorting the Chaos</label><br>
+
+        <input type="checkbox" id="extrempore" value="extrempore" name="event" data-target="form9" onclick="checkboxclicked()" >
+        <label for="extrempore">Extrempore</label><br>
+
+        <input type="checkbox" id="hr_mind_maze" value="hr_mind_maze" name="event" data-target="form10" onclick="checkboxclicked()" >
+        <label for="hr_mind_maze">Hr Mind Maze</label><br>
+
+       </div>
+       <script>
+        function checkboxclicked(){
+          var master_of_masters = document.getElementById("master_of_masters");
+          var the_alpinist = document.getElementById("the_alpinist");
+          var auction_play = document.getElementById("auction_play");
+          var haccer_mimica = document.getElementById("haccer_mimica");
+          var guessing_games = document.getElementById("guessing_games");
+          var ted_talk=document.getElementById('ted_talk');
+          var tuzel_strut = document.getElementById("tuzel_strut");
+          var Sorting_the_choas=document.getElementById('Sorting_the_choas') ;
+          var extrempore=document.getElementById('extrempore');
+          var hr_mind_maze=document.getElementById('hr_mind_maze');
+
+
+          var form1 = document.getElementById("form1");
+          var form2 = document.getElementById("form2");
+          var form3 = document.getElementById("form3");
+          var form4 = document.getElementById("form4");
+          var form5 = document.getElementById("form5");
+          var form6 = document.getElementById("form6");
+          var form7 = document.getElementById("form7");
+          var form8 = document.getElementById("form8");
+          var form9 = document.getElementById("form9");
+          var form10 = document.getElementById("form10");
+
+
+
+          if(master_of_masters.checked==true){
+            form1.style.display="block";
+
+          }
+          else{
+            form1.style.display="none";
+          }
+
+
+          if(the_alpinist.checked == true){
+            form2.style.display="block";
+         }
+         else{
+          form2.style.display="none" ;
+         }
+
+
+         if(auction_play.checked == true){
+          form3.style.display ="block ";
+         }
+         else{
+          form3.style.display= "none";
+         }
+
+
+
+         if(haccer_mimica.checked == true){
+            form4.style.display="block";
+         }
+         else{
+          form4.style.display="none";
+         }
+
+
+         if(guessing_games.checked == true){
+            form5.style.display="block";
+         }
+         else{
+          form5.style.display="none";
+         }
+
+
+         if( ted_talk.checked==true){
+          form6.style.display="block";
+         }
+         else{
+          form6.style.display = 'none';
+         }
+
+
+         if(tuzel_strut.checked==true){
+          form7.style.display='block';
+         }
+         else{
+          form7.style.display ='none';
+
+         }
+
+
+
+         if(Sorting_the_choas.checked==true){
+          form8.style.display='block';
+
+         }
+         else{
+          form8.style.display='none ';
+         }
+
+
+
+         if(extrempore.checked==true){
+          form9.style.display= "block"   ;
+         }
+         else{
+          form9.style.display ="none ";
+         }
+
+
+
+         if(hr_mind_maze.checked==true){
+          form10.style.display= "block"    ;
+         }
+         else{
+          form10.style.display ="none ";
+         }
+
+
+
+
+        }
+
+
+       </script>
+
+
+       <br>
+
+        <div class="event-box" style="display: none;" id="form1">
+          <h4 >Master of Masters</h4><br>
+
+            <label for="tm1">Team member 1</label>
+            <input type="text" id="tm1" name="tm1" >
+            <label for="event1">Team member 2</label>
+            <input type="text" id="tm2" name="tm2" >
+            <label for="event1">Team member 3</label>
+            <input type="text" id="tm3" name="tm3" >
+            <label for="event1">Team member 4</label>
+            <input type="text" id="tm4" name="tm4" >
+            <label for="event1">Team member 5</label>
+            <input type="text" id="tm5" name="tm5" >
+            <label for="event1">Team member 6</label>
+            <input type="text" id="tm6" name="tm6" >
+
+        </div>
+        <br>
+
+        <div class="event-box" style="display: none;" id="form2">
+          <h4>The Alpinist</h4><br>
+
+            <label for="tm1">Team member 1</label>
+            <input type="text" id="tm1" name="tm1" >
+
+        </div>
+        <br>
+
+        <div class="event-box" style="display: none;" id="form3">
+          <h4>Auction Play</h4><br>
+
+            <label for="tm1">Team member 1</label>
+            <input type="text" id="tm1" name="tm1">
+            <label for="tm2">Team member 2</label>
+            <input type="text" id="tm2" name="tm2" >
+
+        </div>
+        <br>
+
+        <div class="event-box" style="display: none;" id="form4">
+          <h4>Haccer Mimica</h4><br>
+
+            <label for="tm1">Team member 1</label>
+            <input type="text" id="tm1" name="tm1" >
+            <label for="tm2">Team member 2</label>
+            <input type="text" id="tm2" name="tm2" >
+            <label for="tm3">Team member 3</label>
+            <input type="text" id="tm3" name="tm3" >
+            <label for="tm4">Team member 4</label>
+            <input type="text" id="tm4" name="tm4" >
+            <label for="tm5">Team member 5</label>
+            <input type="text" id="tm5" name="tm5" >
+            <label for="tm6">Team member 6</label>
+            <input type="text" id="tm6" name="tm6" >
+
+        </div>
+        <br>
+
+        <div class="event-box" style="display: none;" id="form5">
+          <h4>Guessing Games</h4><br>
+
+            <label for="tm1">Team member 1</label>
+            <input type="text" id="tm1" name="tm1" >
+            <label for="tm2">Team member 2</label>
+            <input type="text" id="tm2" name="tm2" >
+
+        </div>
+        <br>
+
+        <div class="event-box" style="display: none; " id="form6">
+          <h4>Ted Talk</h4><br>
+
+            <label for="tm1">Team member 1</label>
+            <input type="text" id="tm1" name="tm1" >
+            <label for="tm2">Team member 2</label>
+            <input type="text" id="tm2" name="tm2" >
+            <label for="tm3">Team member 3</label>
+            <input type="text" id="tm3" name="tm3" >
+            <label for="tm4">Team member 4</label>
+            <input type="text" id="tm4" name="tm4" >
+            <label for="tm5">Team member 5</label>
+            <input type="text" id="tm5" name="tm5" >
+
+        </div>
+        <br>
+
+        <div class="event-box" style="display: none;" id="form7">
+          <h4>Tuzel Strut</h4><br>
+
+            <label for="tm1">Team member 1</label>
+            <input type="text" id="tm1" name="tm1" >
+            <label for="tm2">Team member 2</label>
+            <input type="text" id="tm2" name="tm2" >
+            <label for="tm3">Team member 3</label>
+            <input type="text" id="tm3" name="tm3" >
+            <label for="tm4">Team member 4</label>
+            <input type="text" id="tm4" name="tm4" >
+            <label for="tm5">Team member 5</label>
+            <input type="text" id="tm5" name="tm5" >
+            <label for="tm6">Team member 6</label>
+            <input type="text" id="tm6" name="tm6" >
+            <label for="tm7">Team member 7</label>
+            <input type="text" id="tm7" name="tm7" >
+
+        </div>
+        <br>
+
+        <div class="event-box" style="display: none;" id="form8">
+          <h4>Sorting the chaos</h4><br>
+
+            <label for="tm1">Team member 1</label>
+            <input type="text" id="tm1" name="tm1" >
+            <label for="tm2">Team member 2</label>
+            <input type="text" id="tm2" name="tm2" >
+
+        </div>
+        <br>
+
+        <div class="event-box" style="display: none;" id="form9">
+          <h4>Extrempore</h4><br>
+
+            <label for="tm1">Team member 1</label>
+            <input type="text" id="tm1" name="tm1" >
+            <label for="tm2">Team member 2</label>
+            <input type="text" id="tm2" name="tm2" >
+            <label for="tm3">Team member 3</label>
+            <input type="text" id="tm3" name="tm3" >
+
+        </div>
+        <br>
+
+        <div class="event-box" style="display: none;" id="form10" >
+          <h4>Hr Mind Maze</h4><br>
+
+            <label for="tm1">Team member 1</label>
+            <input type="text" id="tm1" name="tm1" >
+            <label for="tm2">Team member 2</label>
+            <input type="text" id="tm2" name="tm2" >
+            <label for="tm3">Team member 3</label>
+            <input type="text" id="tm3" name="tm3" >
+            <label for="tm4">Team member 4</label>
+            <input type="text" id="tm4" name="tm4" >
+            <label for="tm5">Team member 5</label>
+            <input type="text" id="tm5" name="tm5" >
+            <label for="tm6">Team member 6</label>
+            <input type="text" id="tm6" name="tm6" >
+
+        </div>
+        <br>
+        <input type="submit" value="Next >" class="btn btn-base-color sm-btn-medium btn-large" >
+
+      </form>
+
+    </div>
+    <!-- //.container -->
+  </section>
+  <!-- //Section - Registration end -->
+
+
+
+  <!-- Section - Event banner start -->
+  <section id="event-banner" class="bg-white pull-up">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 text-center">
+          <i class="fa fa-clock-o display-block text-base-color title-extra-large-2"></i>
+          <span class="display-block font-family-alt font-weight-700 letter-spacing-1 margin-5 no-margin-bottom no-margin-rl text-large text-uppercase">
+            Date &amp; Time
+          </span>
+          <p class="margin-3 font-family-alt no-margin-bottom no-margin-rl title-small text-gray-dark-2">
+           September 1, 2023<br>
+           9 AM to 3 AM
+          </p>
+        </div>
+        <!-- //.col-sm-4 -->
+
+        <div class="col-sm-6 xs-margin-8 xs-no-margin-bottom xs-no-margin-rl text-center">
+          <i class="fa fa-map-marker display-block text-base-color title-extra-large-2"></i>
+          <span class="display-block font-family-alt font-weight-700 letter-spacing-1 margin-5 no-margin-bottom no-margin-rl text-large text-uppercase">
+            Venue
+          </span>
+          <p class="margin-3 font-family-alt no-margin-bottom no-margin-rl title-small text-gray-dark-2">
+            Sesiqui Centenery Auditorium,<br>
+            Bon Secours College, Thanjavur
+          </p>
+        </div>
+        <!-- //.col-sm-4 -->
+      </div>
+      <!-- //.row -->
+    </div>
+  </section>
+  <!-- //Section - Event banner end -->
+
+
+
+
+  <!-- Footer Start -->
+  <footer class="footer bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="footer-logo xs-text-center">
+            <img src="../static/images/logos/light.png" alt="">
+          </div>
+          <!-- //.footer-logo -->
+          <p class="disclaimer xs-text-center">
+            *Note: The Registration fee is Rs.150/-.
+          </p>
+          <!-- //.disclaimer -->
+        </div>
+        <!-- //.col-sm-4 -->
+
+        <div class="col-sm-8">
+          <div class="footer-social text-right">
+            <p><ul class="list-inline list-unstyled no-margin xs-text-center xs-title-small title" style="font-size:17px;">
+              <li> <i class="fa fa-instagram"></i>  ace_bonsecours  <a href="https://instagram.com/ace_bonsecours"></a></li>
+              <li> <i class="fa fa-envelope"></i>   acemgt21@gmail.com</li>
+              <li><i class="fa fa-phone"></i>+91 8838200810 <br>
+              <li>+91 9361845838</li>
+            </ul>
+          </p>
+
+          </div>
+          <!-- //.footer-social -->
+        </div>
+        <!-- //.col-sm-8 -->
+      </div>
+      <!-- //.row -->
+    </div>
+    <!-- //.container -->
+  </footer>
+  <!-- //Footer End -->
+
+
+  <!-- Scroll to top -->
+  <a href="#page-top" class="page-scroll scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <script>
+    var checkboxes = document.querySelectorAll("[data-target]");
+
+    checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener("change", function () {
+            var targetId = this.getAttribute("data-target");
+            var targetForm = document.getElementById("targetId");
+
+            if (this.checked) {
+                targetForm.style.display = "block";
+            } else {
+                targetForm.style.display = "none";
+            }
+        });
+    });
+  </script>
+
+
+
+  <!-- jQuery -->
+  <script src="../static/js/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="../static/js/bootstrap.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="../static/js/pace.min.js"></script>
+  <script src="../static/js/debouncer.min.js"></script>
+  <script src="../static/js/jquery.easing.min.js"></script>
+  <script src="../static/js/jquery.inview.min.js"></script>
+  <script src="../static/js/jquery.matchHeight.js"></script>
+  <script src="../static/js/isotope.pkgd.min.js"></script>
+  <script src="../static/js/imagesloaded.pkgd.min.js"></script>
+  <script src="../static/js/flickity.pkgd.min.js"></script>
+  <script src="../static/js/jquery.magnific-popup.min.js"></script>
+  <script src="../static/js/jquery.validate.min.js"></script>
+
+  <!-- Redirect Events  -->
+  <script src="../static/js/redirect.js"></script>
+
+
+
+  <!-- Theme -->
+  <script src="../static/js/main.js"></script>
+
+
+
+</body>
+
+</html>
