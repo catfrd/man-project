@@ -27,6 +27,13 @@ client = MongoClient(MONGO_URI)
 DB_NAME = 'man-project'
 database = client[DB_NAME]
 
+
+@app.route("/", methods=['GET','POST'])
+def home():
+
+    return "Hello World"
+
+
 @app.route('/register',methods=["GET","POST"])
 def register():
     if (request.method == "POST"):
@@ -166,12 +173,6 @@ def registration_success():
         collection=database[collection_name]
 
     return render_template('index.html')
-
-
-@app.route("/", methods=['GET','POST'])
-def home():
-
-    return "Hello World"
 
 
 if __name__ == '__main__':
