@@ -12,8 +12,6 @@ from bson.objectid import ObjectId
 # from emailer import send_email
 
 
-
-
 app = Flask(__name__)
 
 load_dotenv()
