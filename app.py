@@ -12,18 +12,25 @@ from bson.objectid import ObjectId
 # from emailer import send_email
 
 
-
-
 app = Flask(__name__)
 
 load_dotenv()
 
 PORT            = os.environ.get('PORT')
 MONGO_URI       = os.environ.get('MONGO_URI')
+
+
 client = MongoClient(MONGO_URI)
 
 DB_NAME = 'man-project'
 database = client[DB_NAME]
+
+
+@app.route("/", methods=['GET','POST'])
+def home():
+
+    return "Hello World"
+
 
 @app.route('/register',methods=["GET","POST"])
 def register():
@@ -200,7 +207,15 @@ def registration_success():
 
 
 
+@app.route("/registration-success", methods=['GET','POST'])
+def registration_success():
+    if (request.method == "POST"):
+        staffincharge=request.form.get("institution")
+        staffemail=request.form.get("email")
+        mobile=request.form.get("mobile_number")
 
+        collection_name='staff-details'
+        collection=database[collection_name]
 
 
 
@@ -208,4 +223,5 @@ def registration_success():
 if __name__ == '__main__':
 
     app.run(debug=True, host='0.0.0.0', port=PORT)
+
 
