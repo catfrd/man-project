@@ -79,14 +79,19 @@ def registered():
                 team_member5=request.form.get("tm5")
                 team_member6=request.form.get("tm6")
                 result["en1"]=eventName
-                result["tm1"]=[team_member1,team_member2,team_member3,team_member4,team_member5,team_member6]
+                result["tm1"]=[team_member1]
+                result["tm2"]=[team_member2]
+                result["tm3"]=[team_member3]
+                result["tm4"]=[team_member4]
+                result["tm5"]=[team_member5]
+                result["tm6"]=[team_member6]
             #     update_operation = {"$set": {"eventName": eventName,"team_members":[team_member1,team_member2,team_member3,team_member4,team_member5,team_member6]}}
             #     collection.update_one({"_id": document_id}, update_operation)
             elif(events[i]=="the_alpinist"):
                 eventName="the_alpinist"
                 team_member1=request.form.get("tm1")
                 result["en2"]=eventName
-                result["tm2"]=[team_member1]
+                result["tm1"]=[team_member1]
                 # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1}}
                 # collection.update_one({"_id": document_id}, update_operation)
             elif(events[i]=="auction_play"):
@@ -94,7 +99,8 @@ def registered():
                 team_member1=request.form.get("tm1")
                 team_member2=request.form.get("tm2")
                 result["en3"]=eventName
-                result["tm3"]=[team_member1,team_member2]
+                result["tm1"]=[team_member1]
+                result["tm2"]=[team_member2]
                 # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2}}
                 # collection.update_one({"_id": document_id}, update_operation)
 
@@ -109,13 +115,20 @@ def registered():
                 # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2,"team_member3":team_member3,"team_member4":team_member4,"team_member5":team_member5,"team_member6":team_member6}}
                 # collection.update_one({"_id": document_id}, update_operation)
                 result["en4"]=eventName
-                result["tm4"]=[team_member1,team_member2,team_member3,team_member4,team_member5,team_member6]
+                result["tm1"]=[team_member1]
+                result["tm2"]=[team_member2]
+                result["tm3"]=[team_member3]
+                result["tm4"]=[team_member4]
+                result["tm5"]=[team_member5]
+                result["tm6"]=[team_member6]
+
             elif(events[i]=="guessing_games"):
                 eventName="guessing_games"
                 team_member1=request.form.get("tm1")
                 team_member2=request.form.get("tm2")
                 result["en4"]=eventName
-                result["tm4"]=[team_member1,team_member2]
+                result["tm1"]=[team_member1]
+                result["tm2"]=[team_member2]
                 # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2}}
                 # collection.update_one({"_id": document_id}, update_operation)
             elif(events[i]=="ted_talk"):
@@ -126,7 +139,12 @@ def registered():
                 team_member4=request.form.get("tm4")
                 team_member5=request.form.get("tm5")
                 result["en5"]=eventName
-                result["tm5"]=[team_member1,team_member2,team_member3,team_member4,team_member5]
+                result["tm1"]=[team_member1]
+                result["tm2"]=[team_member2]
+                result["tm3"]=[team_member3]
+                result["tm4"]=[team_member4]
+                result["tm5"]=[team_member5]
+                
                 # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2,"team_member3":team_member3,"team_member4":team_member4,"team_member5":team_member5}}
                 # collection.update_one({"_id": document_id}, update_operation)
             elif(events[i]=="tuzel_strut"):
@@ -139,7 +157,13 @@ def registered():
                 team_member6=request.form.get("tm6")
                 team_member7=request.form.get("tm7")
                 result["en6"]=eventName
-                result["tm6"]=[team_member1,team_member2,team_member3,team_member4,team_member5,team_member6,team_member7]
+                result["tm1"]=[team_member1]
+                result["tm2"]=[team_member2]
+                result["tm3"]=[team_member3]
+                result["tm4"]=[team_member4]
+                result["tm5"]=[team_member5]
+                result["tm6"]=[team_member6]
+                result["tm7"]=[team_member7]
                 # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2,"team_member3":team_member3,"team_member4":team_member4,"team_member5":team_member5,"team_member6":team_member6,"team_member7":team_member7}}
                 # collection.update_one({"_id": document_id}, update_operation)
             elif(events[i]=="sorting_the_chaos"):
@@ -159,7 +183,9 @@ def registered():
                 # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2,"team_member3":team_member3}}
                 # collection.update_one({"_id": document_id}, update_operation)
                 result["en8"]=eventName
-                result["tm8"]=[team_member11,team_member21,team_member31]
+                result["tm1"]=[team_member1]
+                result["tm2"]=[team_member2]
+                result["tm3"]=[team_member3]
             elif(events[i]=="hr_mind_maze"):
                 eventName="hr_mind_maze"
                 team_member1=request.form.get("tm1")
@@ -169,8 +195,12 @@ def registered():
                 team_member5=request.form.get("tm5")
                 team_member6=request.form.get("tm6")
                 result["en9"]=eventName
-                result["tm9"]=[team_member1,team_member2,team_member3,team_member4,team_member5,team_member6]
-
+                result["tm1"]=[team_member1]
+                result["tm2"]=[team_member2]
+                result["tm3"]=[team_member3]
+                result["tm4"]=[team_member4]
+                result["tm5"]=[team_member5]
+                result["tm6"]=[team_member6]
 
                 # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2,"team_member3":team_member3,"team_member4":team_member4,"team_member5":team_member5,"team_member6":team_member6}}
                 # collection.update_one({"_id": document_id}, update_operation)

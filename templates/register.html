@@ -13,7 +13,7 @@
   <meta name="description" content="Register for TEDxJMI, x = independently organised TED event. Igniting Minds. This October, at Jamia Millia Islamia.">
   <meta name="keywords" content="TEDx, JMI, Jamia Millia Islamia, New Delhi, event, talks">
 
-  
+
   <!-- Browser themes -->
   <meta name="theme-color" content="#000">
 
@@ -38,7 +38,7 @@
 
   <style>
     .checkbox-container label{
-      text-indent: 30px; 
+      text-indent: 30px;
       font-weight: lighter;
 
     }
@@ -52,14 +52,14 @@
     .event-box {
       border:2px lightgray solid;
       padding: 5px 5px 5px 5px;
-      
+
     }
 
-    
-    
+
+
   </style>
-  
-  
+
+
 </head>
 
 <body id="page-top">
@@ -84,10 +84,10 @@
 
         <div id="navbar" class="navbar-collapse collapse col-lg-9 pull-right">
           <ul class="nav navbar-nav font-family-alt letter-spacing-1 text-uppercase font-weight-700">
-            <li><a href="/" class="line-height-unset">About</a></li>
-            <li><a href="/events/" class="line-height-unset">Events</a></li>
-            <li><a href="/sponsors/" class="line-height-unset">Rules</a></li>
-            <li><a href="/contact/" class="line-height-unset">Contact Us</a></li>
+            <li><a href="index.html" class="line-height-unset">About</a></li>
+            <li><a href="events.html" class="line-height-unset">Events</a></li>
+            <li><a href="rules.html" class="line-height-unset">Rules</a></li>
+            <li><a href="contact.html" class="line-height-unset">Contact Us</a></li>
             <li><a href="#page-top" class="page-scroll">Register</a></li>
           </ul>
         </div>
@@ -114,10 +114,10 @@
         <!-- //.col-md-12 -->
       </div>
       <!-- //.row -->
-      
 
-      <form  method="POST" >
-        
+
+      <form  method="POST" action="/final-registration"> >
+
         <label for="institution">Name of the institution </label>
         <input type="text" id="institution" name="institution" required>
 
@@ -145,35 +145,35 @@
           <option value="tuzel_strut">Tuzel Strut</option>
           <option value="hr_mind_maze">HR Mind Maze</option>
         </select> -->
-       <div class="checkbox-container"> 
-        <input type="checkbox" id="master_of_masters" value="master_of_masters" name="event1" data-target="form1" onclick="checkboxclicked()">
+       <div class="checkbox-container">
+        <input type="checkbox" id="master_of_masters" value="master_of_masters" name="event" data-target="form1" onclick="checkboxclicked()">
         <label for="master_of_masters">Master of Masters</label><br>
 
-        <input type="checkbox" id="the_alpinist" value="the_alpinist" name="event2" data-target="form2" onclick="checkboxclicked()" >
+        <input type="checkbox" id="the_alpinist" value="the_alpinist" name="event" data-target="form2" onclick="checkboxclicked()" >
         <label for="the_alpinist">The Alpinist</label><br>
-     
-        <input type="checkbox" id="auction_play" value="auction_play" name="event3" data-target="form3" onclick="checkboxclicked()" >
+
+        <input type="checkbox" id="auction_play" value="auction_play" name="event" data-target="form3" onclick="checkboxclicked()" >
         <label for="auction_play">Auction Play</label><br>
 
-        <input type="checkbox" id="haccer_mimica" value="haccer_mimica" name="event4" data-target="form4" onclick="checkboxclicked()">
+        <input type="checkbox" id="haccer_mimica" value="haccer_mimica" name="event" data-target="form4" onclick="checkboxclicked()">
         <label for="haccer_mimica">Haccer Mimica</label><br>
-        
-        <input type="checkbox" id="guessing_games" value="guessing_games" name="event5" data-target="form5" onclick="checkboxclicked()">
+
+        <input type="checkbox" id="guessing_games" value="guessing_games" name="event" data-target="form5" onclick="checkboxclicked()">
         <label for="guessing_games">Guessing Games</label><br>
 
-        <input type="checkbox" id="ted_talk" value="ted_talk" name="event6" data-target="form6" onclick="checkboxclicked()">
+        <input type="checkbox" id="ted_talk" value="ted_talk" name="event" data-target="form6" onclick="checkboxclicked()">
         <label for="ted_talk">Ted Talk</label><br>
-        
-        <input type="checkbox" id="tuzel_strut" value="tuzel_strut" name="event7" data-target="form7" onclick="checkboxclicked()" >
+
+        <input type="checkbox" id="tuzel_strut" value="tuzel_strut" name="event" data-target="form7" onclick="checkboxclicked()" >
         <label for="tuzel_strut">Tuzel Strut</label><br>
 
-        <input type="checkbox" id="Sorting_the_choas" value="Sorting_the_choas" name="event8" data-target="form8" onclick="checkboxclicked()">
+        <input type="checkbox" id="Sorting_the_choas" value="Sorting_the_choas" name="event" data-target="form8" onclick="checkboxclicked()">
         <label for="Sorting_the_choas">Sorting the Chaos</label><br>
 
-        <input type="checkbox" id="extrempore" value="extrempore" name="event9" data-target="form9" onclick="checkboxclicked()" >
+        <input type="checkbox" id="extrempore" value="extrempore" name="event" data-target="form9" onclick="checkboxclicked()" >
         <label for="extrempore">Extrempore</label><br>
 
-        <input type="checkbox" id="hr_mind_maze" value="hr_mind_maze" name="event10" data-target="form10" onclick="checkboxclicked()" >
+        <input type="checkbox" id="hr_mind_maze" value="hr_mind_maze" name="event" data-target="form10" onclick="checkboxclicked()" >
         <label for="hr_mind_maze">Hr Mind Maze</label><br>
 
        </div>
@@ -206,21 +206,21 @@
 
           if(master_of_masters.checked==true){
             form1.style.display="block";
-            
+
           }
           else{
             form1.style.display="none";
           }
-         
-         
+
+
           if(the_alpinist.checked == true){
             form2.style.display="block";
          }
          else{
           form2.style.display="none" ;
          }
-         
-         
+
+
          if(auction_play.checked == true){
           form3.style.display ="block ";
          }
@@ -229,7 +229,7 @@
          }
 
 
-        
+
          if(haccer_mimica.checked == true){
             form4.style.display="block";
          }
@@ -289,21 +289,21 @@
          else{
           form10.style.display ="none ";
          }
-        
-         
-          
+
+
+
 
         }
 
 
        </script>
 
-       
+
        <br>
 
         <div class="event-box" style="display: none;" id="form1">
           <h4 >Master of Masters</h4><br>
-          
+
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" >
             <label for="event1">Team member 2</label>
@@ -316,33 +316,33 @@
             <input type="text" id="tm5" name="tm5" >
             <label for="event1">Team member 6</label>
             <input type="text" id="tm6" name="tm6" >
-         
+
         </div>
         <br>
 
         <div class="event-box" style="display: none;" id="form2">
           <h4>The Alpinist</h4><br>
-          
+
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" >
-          
+
         </div>
         <br>
 
         <div class="event-box" style="display: none;" id="form3">
           <h4>Auction Play</h4><br>
-         
+
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1">
             <label for="tm2">Team member 2</label>
             <input type="text" id="tm2" name="tm2" >
-          
+
         </div>
         <br>
 
         <div class="event-box" style="display: none;" id="form4">
           <h4>Haccer Mimica</h4><br>
-          
+
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" >
             <label for="tm2">Team member 2</label>
@@ -355,24 +355,24 @@
             <input type="text" id="tm5" name="tm5" >
             <label for="tm6">Team member 6</label>
             <input type="text" id="tm6" name="tm6" >
-         
+
         </div>
         <br>
 
-        <div class="event-box" style="display: none;" id="form5">  
+        <div class="event-box" style="display: none;" id="form5">
           <h4>Guessing Games</h4><br>
-          
+
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" >
             <label for="tm2">Team member 2</label>
             <input type="text" id="tm2" name="tm2" >
-         
-        </div>  
+
+        </div>
         <br>
-          
-        <div class="event-box" style="display: none; " id="form6">  
+
+        <div class="event-box" style="display: none; " id="form6">
           <h4>Ted Talk</h4><br>
-         
+
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" >
             <label for="tm2">Team member 2</label>
@@ -383,13 +383,13 @@
             <input type="text" id="tm4" name="tm4" >
             <label for="tm5">Team member 5</label>
             <input type="text" id="tm5" name="tm5" >
-          
+
         </div>
         <br>
 
         <div class="event-box" style="display: none;" id="form7">
           <h4>Tuzel Strut</h4><br>
-          
+
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" >
             <label for="tm2">Team member 2</label>
@@ -404,37 +404,37 @@
             <input type="text" id="tm6" name="tm6" >
             <label for="tm7">Team member 7</label>
             <input type="text" id="tm7" name="tm7" >
-          
+
         </div>
         <br>
 
         <div class="event-box" style="display: none;" id="form8">
           <h4>Sorting the chaos</h4><br>
-          
+
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" >
             <label for="tm2">Team member 2</label>
             <input type="text" id="tm2" name="tm2" >
-    
+
         </div>
         <br>
 
         <div class="event-box" style="display: none;" id="form9">
           <h4>Extrempore</h4><br>
-          
+
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" >
             <label for="tm2">Team member 2</label>
             <input type="text" id="tm2" name="tm2" >
             <label for="tm3">Team member 3</label>
             <input type="text" id="tm3" name="tm3" >
-          
+
         </div>
         <br>
 
         <div class="event-box" style="display: none;" id="form10" >
           <h4>Hr Mind Maze</h4><br>
-          
+
             <label for="tm1">Team member 1</label>
             <input type="text" id="tm1" name="tm1" >
             <label for="tm2">Team member 2</label>
@@ -447,13 +447,13 @@
             <input type="text" id="tm5" name="tm5" >
             <label for="tm6">Team member 6</label>
             <input type="text" id="tm6" name="tm6" >
-         
+
         </div>
         <br>
         <input type="submit" value="Next >" class="btn btn-base-color sm-btn-medium btn-large" >
 
       </form>
-        
+
     </div>
     <!-- //.container -->
   </section>
@@ -522,7 +522,7 @@
               <li>+91 9361845838</li>
             </ul>
           </p>
-          
+
           </div>
           <!-- //.footer-social -->
         </div>
@@ -537,7 +537,7 @@
 
   <!-- Scroll to top -->
   <a href="#page-top" class="page-scroll scroll-to-top"><i class="fa fa-angle-up"></i></a>
-   
+
   <script>
     var checkboxes = document.querySelectorAll("[data-target]");
 
@@ -554,7 +554,7 @@
         });
     });
   </script>
-  
+
 
 
   <!-- jQuery -->
@@ -574,16 +574,16 @@
   <script src="../static/js/flickity.pkgd.min.js"></script>
   <script src="../static/js/jquery.magnific-popup.min.js"></script>
   <script src="../static/js/jquery.validate.min.js"></script>
-  
+
   <!-- Redirect Events  -->
   <script src="../static/js/redirect.js"></script>
 
-  
+
 
   <!-- Theme -->
   <script src="../static/js/main.js"></script>
 
-  
+
 
 </body>
 
