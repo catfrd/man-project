@@ -35,6 +35,48 @@ def home():
 def events():
     return render_template('events.html')
 
+@app.route("/events/masterofmasters", methods=['GET','POST'])
+def mastersofmasters():
+    return render_template('masterofmasters.html')
+
+@app.route("/events/thealpinist", methods=['GET','POST'])
+def alpinist():
+    return render_template('thealpinist.html')
+
+@app.route("/events/auctionplay", methods=['GET','POST'])
+def auctionplay():
+    return render_template('auctionplay.html')
+
+@app.route("/events/haccermimica", methods=['GET','POST'])
+def haccermimica():
+    return render_template('haccermimica.html')
+
+@app.route("/events/guessinggame", methods=['GET','POST'])
+def guessinggame():
+    return render_template('guessinggame.html')
+
+@app.route("/events/tedtalk", methods=['GET','POST'])
+def tedtalk():
+    return render_template('tedtalk.html')
+
+@app.route("/events/tuzelstrut", methods=['GET','POST'])
+def tuzelstrut():
+    return render_template('tuzelstrut.html')
+
+@app.route("/events/sortingthechoas", methods=['GET','POST'])
+def sortingthechoas():
+    return render_template('sortingthechoas.html')
+
+@app.route("/events/extrempore", methods=['GET','POST'])
+def extrempore():
+    return render_template('extrempore.html')
+
+@app.route("/events/hr_mind_maze", methods=['GET','POST'])
+def hr_mind_maze():
+    return render_template('hr_mind_maze.html')
+
+
+
 @app.route("/rules", methods=['GET','POST'])
 def rules():
     return render_template('rules.html')
