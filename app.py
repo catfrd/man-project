@@ -37,7 +37,7 @@ def register():
 
         return redirect('/final-registration')
 
-    return render_template('index.html')
+    return render_template('register.html')
 
 @app.route("/final-registration", methods=['GET','POST'])
 def registered():
@@ -144,7 +144,7 @@ def registered():
                 result["tm3"]=[team_member3]
                 result["tm4"]=[team_member4]
                 result["tm5"]=[team_member5]
-                
+
                 # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2,"team_member3":team_member3,"team_member4":team_member4,"team_member5":team_member5}}
                 # collection.update_one({"_id": document_id}, update_operation)
             elif(events[i]=="tuzel_strut"):
