@@ -112,7 +112,7 @@
           </p>
 
           <br>
-          <form name="contact" action="process_contact.php" method="post" id="form-contact" netlify>
+          <form name="contact" action="/thankyou" method="post" id="form-contact" netlify>
             <div class="row margin-4 no-margin-rl">
               <input type="text" placeholder="Your Name" name="name" class="required" required>
               <input type="email" placeholder="Your Email" name="email" class="required email" required>
@@ -128,7 +128,7 @@
             <!-- //.row -->
 
             <div class="row margin-4 no-margin-rl">
-              <button id="btn-form-contact" type="submit" class="btn btn-base-color btn-medium">
+              <button id="btn-form-contact" type="submit" class="btn btn-base-color btn-medium" ">
                 Send Message
               </button>
             </div>
@@ -254,24 +254,7 @@
   <!-- Scroll to top -->
   <a href="#page-top" class="page-scroll scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
-  <script>
-    document.getElementById("form-contact").addEventListener("submit", function (event) {
-        event.preventDefault();
 
-        var formData = new FormData(this);
-
-        fetch("process_contact.php", {
-            method: "POST",
-            body: formData
-        }).then(function (response) {
-            return response.text();
-        }).then(function (responseText) {
-            alert(responseText);
-            window.location.href = "thank_you.html"; // Redirect to thank you page
-        });
-    });
-
-  </script>
 
   <!-- jQuery -->
   <script src="../static/js/jquery.min.js"></script>

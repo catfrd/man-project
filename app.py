@@ -75,6 +75,10 @@ def extrempore():
 def hr_mind_maze():
     return render_template('hr_mind_maze.html')
 
+@app.route("/thankyou", methods=['GET','POST'])
+def thankyou():
+    return render_template('thank_you.html')
+
 
 
 @app.route("/rules", methods=['GET','POST'])
