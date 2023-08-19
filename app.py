@@ -100,7 +100,7 @@ def final_registration():
                 eventName="the_alpinist"
                 team_member1=request.form.get("tm1")
                 result["en2"]=eventName
-                result["tm2"]=[team_member1]
+                result["tm2"]=team_member1
                 # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1}}
                 # collection.update_one({"_id": document_id}, update_operation)
             elif(events[i]=="auction_play"):
