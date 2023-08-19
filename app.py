@@ -220,7 +220,7 @@ def registered():
                 # collection.update_one({"_id": document_id}, update_operation)
 
         return redirect(url_for('registration_success',**result))
-    return render_template('index.html')
+    return render_template('final_registration.html')
 
 @app.route("/registration-success", methods=['GET','POST'])
 def registration_success():
@@ -236,7 +236,7 @@ def registration_success():
         res['staffemail']=staffemail
         res['mobile']=mobile
         collection.insert_one(res)
-        return render_template('final_registration.html')
+        return render_template('registration_successful.html')
     return render_template('final_registration.html')
 
 
