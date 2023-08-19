@@ -2,13 +2,13 @@ from flask import Flask, g,render_template, request, redirect, session, url_for
 from pymongo import MongoClient
 from dotenv import load_dotenv
 import os
-from datetime import datetime
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from email.mime.application import MIMEApplication
-from flask_mail import Mail, Message
-from bson.objectid import ObjectId
+# from datetime import datetime
+# import smtplib
+# from email.mime.multipart import MIMEMultipart
+# from email.mime.text import MIMEText
+# from email.mime.application import MIMEApplication
+# from flask_mail import Mail, Message
+# from bson.objectid import ObjectId
 # from emailer import send_email
 
 
@@ -42,8 +42,6 @@ def rules():
 @app.route("/contact", methods=['GET','POST'])
 def contact():
     return render_template('contact.html')
-
-
 
 
 @app.route('/register',methods=["GET","POST"])
