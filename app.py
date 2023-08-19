@@ -13,6 +13,7 @@ from bson.objectid import ObjectId
 
 
 app = Flask(__name__)
+app.secret_key = "your_secret_key"
 
 load_dotenv()
 
@@ -47,15 +48,16 @@ def contact():
 
 @app.route('/register',methods=["GET","POST"])
 def register():
-    if (request.method == "POST"):
 
-        return redirect('/final-registration')
 
     return render_template('register.html')
 
 @app.route("/final-registration", methods=['GET','POST'])
-def registered():
-    if(request.method == "POST"):
+def final_registration():
+        
+
+    if (request.method == "POST"):
+
         collection_name='registration'
         collection=database[collection_name]
         # if 'result_dict' not in g:
@@ -73,16 +75,14 @@ def registered():
             "year": year,
             "events": events
         }
+
         # x= collection.insert_one(g.result).inserted_id
         # document_id = ObjectId("")
 
 
-# Update the document with the specified _id
-        # result = collection.update_one({"_id": document_id}, update_operation)
+        # Update the document with the specified _id
+        #         result = collection.update_one({"_id": document_id}, update_operation)
 
-
-
-        print(events)
         for i in range(len(events)):
             if(events[i]=="master_of_masters"):
                 eventName="master_of_masters"
@@ -216,16 +216,21 @@ def registered():
                 result["tm5"]=[team_member5]
                 result["tm6"]=[team_member6]
 
-                # update_operation = {"$set": {"eventName": eventName,"team_member1":team_member1,"team_member2":team_member2,"team_member3":team_member3,"team_member4":team_member4,"team_member5":team_member5,"team_member6":team_member6}}
-                # collection.update_one({"_id": document_id}, update_operation)
+        print("hello hellooo", result)
 
-        return redirect(url_for('registration_success',**result))
-    return render_template('final_registration.html')
+        session['result_dict'] = result
+
+        return redirect(url_for('registration_success'))
+
+    return render_template('register2.html')
 
 @app.route("/registration-success", methods=['GET','POST'])
 def registration_success():
+
     if (request.method == "POST"):
-        res=dict(request.args)
+        # res=dict(request.args)
+        res = session.get('result_dict')
+
         staffincharge=request.form.get("institution")
         staffemail=request.form.get("email")
         mobile=request.form.get("mobile_number")
@@ -235,13 +240,13 @@ def registration_success():
         res['staffincharge']=staffincharge
         res['staffemail']=staffemail
         res['mobile']=mobile
-        collection.insert_one(res)
-        return render_template('registration_successful.html')
-    return render_template('final_registration.html')
+        x = collection.insert_one(res)
 
+        print(x)
 
-
-
+        return render_template('registration_success.html')
+    
+    return render_template('register2.html')
 
 
 
