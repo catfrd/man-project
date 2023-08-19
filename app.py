@@ -28,8 +28,22 @@ database = client[DB_NAME]
 
 @app.route("/", methods=['GET','POST'])
 def home():
-
     return render_template('index.html')
+
+@app.route("/events", methods=['GET','POST'])
+def home():
+    return render_template('events.html')
+
+@app.route("/rules", methods=['GET','POST'])
+def home():
+    return render_template('rules.html')
+
+@app.route("/contact", methods=['GET','POST'])
+def home():
+    return render_template('contact.html')
+
+
+
 
 @app.route('/register',methods=["GET","POST"])
 def register():
@@ -37,7 +51,7 @@ def register():
 
         return redirect('/final-registration')
 
-    return render_template('index.html')
+    return render_template('register.html')
 
 @app.route("/final-registration", methods=['GET','POST'])
 def registered():
