@@ -31,15 +31,15 @@ def home():
     return render_template('index.html')
 
 @app.route("/events", methods=['GET','POST'])
-def home():
+def events():
     return render_template('events.html')
 
 @app.route("/rules", methods=['GET','POST'])
-def home():
+def rules():
     return render_template('rules.html')
 
 @app.route("/contact", methods=['GET','POST'])
-def home():
+def contact():
     return render_template('contact.html')
 
 
