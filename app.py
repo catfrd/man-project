@@ -132,12 +132,9 @@ def final_registration():
                 eventName="master_of_masters"
                 team_member1=request.form.get("tm1")
                 team_member2=request.form.get("tm2")
-                team_member3=request.form.get("tm3")
-                team_member4=request.form.get("tm4")
-                team_member5=request.form.get("tm5")
-                team_member6=request.form.get("tm6")
+                
                 result["en1"]=eventName
-                result["tm1"]=[team_member1,team_member2,team_member3,team_member4,team_member5,team_member6]
+                result["tm1"]=[team_member1,team_member2]
             #     update_operation = {"$set": {"eventName": eventName,"team_members":[team_member1,team_member2,team_member3,team_member4,team_member5,team_member6]}}
             #     collection.update_one({"_id": document_id}, update_operation)
             elif(events[i]=="the_alpinist"):
