@@ -228,10 +228,8 @@ def final_registration():
                 team_member2=request.form.get("tm2")
                 team_member3=request.form.get("tm3")
                 team_member4=request.form.get("tm4")
-                team_member5=request.form.get("tm5")
-                team_member6=request.form.get("tm6")
                 result["en10"]=eventName
-                result["tm10"]=[team_member1,team_member2,team_member3,team_member4,team_member5,team_member6]
+                result["tm10"]=[team_member1,team_member2,team_member3,team_member4]
 
 
         print("hello hellooo", result)
